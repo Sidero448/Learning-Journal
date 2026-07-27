@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html lang="tr">
+    <head>
+        <meta charset="utf-8">
+
+
+        <title>List Tags</title>
+
+    </head>
+    <body>
+        <ul> <!-- ul etiketi düzensiz/sırasız liste oluşturmak için gerekli olan etikettir(unordered list).-->
+            <li>Sabah 6 da uyan</li> <!-- li etiketi ile listedeki maddeler teker teker yazılır-->
+            <li>Dişlerini fırçala</li>
+            <li>kahve iç</li>
+            <li>
+                kahvaltı yap
+                <ul> <!--Listeler iç içe kullanılabilir.-->
+                    <li>
+                        yumurta ye
+                        <ul>
+                            <li>omlet yaparak ye</li>
+                            <li>yumurtalar organik köy yumurtası olsun</li>
+                            <li>az pişmiş olsun</li>
+                        </ul>
+                    </li>
+                    <li>süt iç</li>
+                    <li>bal ye</li>
+                </ul>
+            </li>
+            <!--Yukarıdaki liste bir düzensiz liste örneğidir-->
+        </ul>
+
+        <ol> <!-- ol etiketi düzenli/sıralı liste oluşturmak için gerekli olan etikettir (ordered list)-->
+            <li>Editörü kur</li>
+            <li>.html uzantılı dosya oluştur</li>
+            <li>ilk html kodunu yaz</li>
+        </ol>
+        <ol type="A"> <!-- type niteliği ile sıralı listede sıralama biçimi değiştirilebilir (1,2,3/a,b,c vs,)
+                           aynı mantık düzensiz listeler(ul etiketli) içinde geçerlidir.Çok önemi yok çünkü
+                           css ile zaten düzenlenecek.-->
+            <li>Editörü kur</li>
+            <li>.html uzantılı dosya oluştur</li>
+            <li>ilk html kodunu yaz</li>
+        </ol>
+       
+        <dl> <!-- dl etiketi tanım listesi oluşturmak için gerekli olan etikettir-->
+            <dt>Youtube</dt> <!--dt etiketi tanımlanacak olan şeyi belirtmek için kullanılır-->
+            <dd>Video paylaşım platformu</dd> <!--dd etiketi tanımlanacak şeyin tanımını yazmak için kullanılır-->
+            <dt>Mr Robot</dt>
+            <dd>Dünya üzerindeki en iyi dizi</dd>
+        </dl>
+        <!--Listeler menü yapımı için en sık kullanılan elementlerdir-->
+    </body>
+</html>

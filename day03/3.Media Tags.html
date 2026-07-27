@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html lang="tr">
+    <head>
+        <meta charset="utf-8">
+
+
+        <title>Media Tags</title>
+
+    </head>
+    <body>
+        <audio controls loop muted> <!--ses dosyası oynatmak için gerekli olan etikettir.Controls niteliği ile 
+                             ses dosyasını çalmak için gerekli olan paneli getiririz.Loop niteliği ile ses 
+                             dosyası bittiğinde başa sarıp tekrardan başlar.muted niteliği ise manuel olarak
+                             ses dosyasının sesi açılana tek sesinin 0 da kalmasını/ses dosyasının 
+                             susturulmasını sağlar.-->
+            <source src="E:\Coding\Learning\Learning journal\Rinnegan Sound Effect.mp3" type="audio/mpeg">
+        </audio>
+        <!--Normal şartlarda controls niteliğine ihtiyaç yok çünkü javascript ile daha iyi ses dosyası
+            çalma panelleri oluşturabileceğiz.-->
+
+        <video width="500" height="500" controls poster="E:\Coding\Learning\Learning journal\4d6d47b9c4c280380b97d6a9bf31189b.jpg"> 
+        <!--Video etiketi ile video oynatabiliriz.Audio etiketinde kullanılan nitelikler video etiketindede 
+        kullanılabilir.Width/Height niteliği ile videonun formatı değiştirilebilir.-->
+            <source src="E:\Coding\Learning\Learning journal\Itachi saying mangekyou sharingan.mp4" type="video/mp4">
+        </video>
+        <!--Normal şartlarda controls niteliğine ihtiyaç yok çünkü javascript ile daha iyi ses dosyası
+            çalma panelleri oluşturabileceğiz.-->
+    </body>
+</html>

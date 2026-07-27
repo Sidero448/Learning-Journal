@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html lang="tr">
+    <head>
+        <meta charset="utf-8">
+
+
+        <title>Form Tags</title>
+
+    </head>
+
+    <body>
+         <form action="" method="GET" enctype="multipart/form-data">
+      <!--form etiketinin içinde bulunan action etiketi form bilgilerinin nereye gönderileceğini ayarlar boş bırakılırsa aynı sayfaya gönderilir.
+      Method niteliği ile post olarak mı gidecek get olarak mı o ayarlanır daha sonra öğrenilecek.-->
+      <!--enctype günümüzde kullanılmıyor yazılım dilleri zaten bunun yerini alıyor-->
+
+
+      <label for="UserName"><b><i>User Name</i></b></label>
+      <!-- label etiketi, form elemanlarına (input, textarea, select vb.) açıklama veya isim vermek için kullanılır. Ayrıca açıklama yazısı ile 
+       form elemanını birbirine bağlar. Böylece kullanıcı yazıya tıkladığında ilgili form elemanı seçilir.for niteliği ise label'ın hangi form 
+       elemanına ait olduğunu belirtir. Değeri, bağlanacağı form elemanının id değeriyle aynı olmalıdır ve id niteliği, bir HTML elemanına 
+       benzersiz (tek) bir kimlik verir. Aynı sayfada iki elemanın id değeri aynı olmamalıdır. CSS, JavaScript ve label etiketi gibi yapılar bu 
+       kimliği kullanarak ilgili elemana erişir.-->
+      <input id="UserName" type="text" />
+      <!--input girdi demektir.Kullanıcının girdi yapmasını sağlar.type niteliği ile girdi tipi belirlenir.text tipi normal yazı yazmak için 
+      kullanılır-->
+      <input id="UserName" type="text" placeholder="Enter Your UserName" autofocus/>
+      <!--place holder niteliği ile kullanıcı girdiyi yazana kadar input kısmında görünecek yazıyı belirtebiliriz. autofocus niteliği site 
+      açıldığı gibi bu girdiye odaklanılmasını sağlar.-->
+      <input id="UserName" type="text" required />
+      <!--required niteliği ile bu girdinin doldurulmasının zorunlu olmasını sağlarız.-->
+      <input id="UserName" type="text" value="Example" />
+      <!--value ile girdiye bir değer verilir ve daha sonra kodlama ile site düzenlenirken bu girdiyi seçmek kolaylaşır-->
+      <input readonly id="UserName" type="text" value="Example" />
+      <!--readonly niteliği ile bu girdiyle herhangi birşekilde etikleşime girilmesi imkansız kılınır girdi sadece görülebilir başka birşey 
+      yapılamaz-->
+      <input disabled id="UserName" type="text" />
+      <!--disabled niteliği ile bu girdiyi devre dışı bırakırız.Bu daha sonra scriptlerde bu girdinin kullanılamamasını sağlar bu yüzden 
+      herhangi bir girdi oluştururken eğer girdiyle etkileşime girilmesini engellemek istiyorsak readonly niteliğini kullanmak daha sağlıklı olur-->
+      <input id="UserName" type="text" maxlength="6" />
+      <!--maxlength niteliği ile girilebilecek max karakter sayısını tanımlarız.-->
+      <br />
+
+
+      <label for="Password"><b><i>Password</i></b></label>
+      <input id="Password" type="password" required /><br />
+      <!--password tipi ile şifre olan yazılar girilir.-->
+
+
+      <label for="e-mail"><b><i>E-mail</i></b></label>
+      <input type="email" id="e-mail" required /><br />
+      <!-- email tipi ile email girilir.eğer girilen yazıda -----@-----.com yazmıyorsa geçerli olmaz.ayrıca telefonlarda klavyede @ işareti ile
+        . işaretinin öne çıkmasını sağlar.-->
+
+
+      <label for="File"><b><i>Choose a file</i></b></label>
+      <input id="File" type="file" />
+      <!-- dosya tipi ile dosya ekleme seçeneği gelir-->
+      <input id="File" type="file" accept="image/*" />
+      <!--accept niteliği ile sadece belirli bir dosya türünün kabul edilmesi sağlanabilir.burada sadece fotoğraf dosyalarını kabul etmek için 
+      accept="image/*" niteliği kullanılmıştır.-->
+      <input id="File" type="file" name="File[]" multiple /><br />
+      <!-- multiple nileği ile birden fazla dosya seçilebilir fakat inputa isim vermek ve verilen ismin sonuna [] işaretinin konması lazımdır. -->
+
+
+      <label>
+        <input type="checkbox" required /> I've read terms and conditions<br />
+        <!--checkbox tipi ile kutucuk işaretleme yapılır birşeyi onaylamak için falan kullanılabilir.-->
+      </label>
+
+      <iframe name="t.a.c"src="E:\Coding\Learning\Learning journal\TermsAndConditions.html"></iframe><br/>
+
+
+      <label>
+        <input type="radio" name="gender" required value="man" /> Man
+        <!-- type="radio" ile birden fazla seçenek arasından yalnızca bir tanesinin seçilmesi sağlanır. Cinsiyet, ödeme yöntemi, evet/hayır gibi 
+         tek seçim gerektiren alanlarda kullanılır.name niteliği ile radio butonları aynı grup altında toplanır. Aynı name değerine sahip radio 
+         butonlarından yalnızca biri seçilebilir.value niteliği ile kullanıcının seçtiği seçeneğin forma gönderilecek değeri belirlenir. Örneğin 
+         value="erkek" ise kullanıcı "Erkek" seçtiğinde forma "erkek" değeri gönderilir.-->
+      </label>
+
+
+      <label>
+        <input type="radio" name="gender" required value="woman" /> Woman
+      </label><br/>
+
+      <input type="hidden" name="test" value="test" /> <br />
+      <!-- hidden tipi ile kullanıcının sitede göremeyeceği fakat sitenin arka planında çalışacak bir girdi oluşturulabilir.-->
+
+      <input type="submit" value="send" />
+      <!--normalde button etiketi kullanılır -->
+      <!-- submit tipi tüm bu yazılan girdileri sayfaya göndermek için kullanılan bir butondur.value ile send değeri verilmiş bu yüzden sayfadayken
+        oluşturulan bu butonun üstünde send yazacak submit yerine.-->
+
+      <input type="reset" value="reset" />
+      <!-- reset tipi ile tüm yazılan girdiler sıfırlanabilir ve baştan yazılabilir.-->
+
+    </form>
+
+    <br /><br /><br />
+
+    <input type="color" /><br />
+    <!-- color tipiyle renk girdisi oluşturulur kullanıcı bir renk seçer-->
+
+    <input type="date" /><br />
+    <!-- date tipiyle tarih girdisi oluşturulur kullanıcı bir tarih seçer-->
+
+    <input type="datetime-local" /><br />
+    <!-- datetime local tipiyle tarih saat girdisi oluşturulur yani bu tarih girdisine saat eklenebilir-->
+
+    <input type="month" /><br />
+    <!-- month tipiyle ay girdisi oluşturulur kullanıcı herhangi bir yıl seçip bir ay seçer-->
+     
+    <input type="week" /><br />
+    <!-- week tipiyle hafta girdisi oluşturulur kullanıcı herhangi bir yıl bir ay ve bir hafta seçer-->
+
+    <input type="number" /><br />
+    <!-- number tipiyle sayı girdisi oluşturulur kullanıcı bir sayı seçer-->
+
+    <input type="number" min="5" max="15" /><br />
+    <!-- min,max nitelikleriyle seçilen sayının en az ve en fazla değerleri seçilir -->
+
+    <input type="range" />
+    <!-- range tipiyle bir kaydırma çubuğu oluşturulur ve kullanıcı bir aralık seçer -->
+
+    <input type="range" min="0" max="20" />
+    <!-- min,max nitelikleriyle bu aralığın en az ve en fazla değerleri seçilir-->
+
+    <input type="range" step="20" /><br />
+    <!-- step niteliği ile bu kaydırma çubuğunda daireyi kaydırırken ne kadar adımla kaydırılacağı seçilir yani 20 birim atlaya atlaya kayar-->
+     
+    <input type="search" /> <br />
+    <!-- search tipi ile arama çubuğu oluşturulur.normal text girdisinden farklı olarak burda tüm yazılanları silme butonu vardır ve arama girdisi
+      olarak sayılır bilgisayar dilinde-->
+
+    <input type="tel" /><br />
+    <!-- tel tipiyle telefon girdisi oluşturulur-->
+
+    <input type="time" /> <br />
+    <!--time tipi ile saat girdisi oluşturulur-->
+
+    <input type="url" />
+    <!--url tipi ile url girdisi oluşturulur kullanıcı buraya bir url yazar-->
+    </body>
+</html>

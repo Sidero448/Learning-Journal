@@ -1,0 +1,1 @@
+18.07.2026 saat sabah 6 civarında başladım. 7:25 de bitirdim.

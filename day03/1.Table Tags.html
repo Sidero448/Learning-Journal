@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="tr">
+    <head>
+        <meta charset="utf-8">
+        <title>Table Tags</title>
+    </head>
+    <body>
+
+        
+
+        <table border="2"> <!-- table etiketi tablo oluşturmak için kullanılır.-->
+        <caption> 3 Aylık gelir ve Aylık maaşlar.</caption>
+         <thead> <!--başlıkla olan ilgili kodlar bu etiketin içine yazılır.-->
+            <tr><!-- tr etiketi tablodaki satırları oluşturmak için kullanılır.-->
+                <th>Ay</th> <!--th etiketi tablodaki sütun başlıklarını oluşturmak için kullanılır-->
+                <th>Maaş</th>
+                <th>3 Ayın toplamı</th>
+            </tr>
+         </thead> 
+
+         <tbody> <!--başlıkla ilgisi olmayan kodlar bu etiketin içine yazılır.-->
+            <tr>
+                <td> <!-- td etiketi ise tablodaki sütünları oluşturmak için kullanılır.-->
+                    Ocak
+                </td>
+                <td>
+                    2500
+                </td>
+                <td rowspan="3">7500 TL</td> <!-- rowspan birden fazla satırı kapsayan büyük bir satır
+                                                oluşturur.-->
+            </tr>
+            <tr>
+                <td>
+                    Şubat
+                </td>
+                <td>
+                    3000
+                </td>
+                
+            </tr>
+            <tr>
+                <td>
+                    Mart
+                </td>
+                <td>
+                    2000
+                </td>
+            </tr>
+         </tbody>
+         <tfoot>
+            <tr>
+                <td colspan="3"> <!-- colspan ile ayrık duran brden fazla sütunu birleştirebiliriz.-->
+                    Toplam:7500
+                </td>
+            </tr>
+         </tfoot>
+            
+        </table>
+
+        
+        
+        
+
+        
+    </body>
+</html>
