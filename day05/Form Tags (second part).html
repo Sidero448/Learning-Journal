@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="tr">
+    <head>
+        <meta charset="utf-8">
+        <title>Form Tags (second part)</title>
+    </head>
+
+    <Body>
+        <input type="text" name="UserName" autocomplete="off">
+        <!--Autocomplete off niteliği daha önce bu inputa yazılan girdi önerilerini kaldırmak için kullanılır.Site açıldığında ve bu inputa 
+            tıklandığında daha önce kullanılan kullanıcı adı öne çıkar autocomplete="off" niteliği ile bu öneriler kaldırılır.-->
+
+            <br><br><br>
+
+
+
+        <form action="" method="GET" id="form1">
+
+            <label for="UserName"><b>UserName</b></label><br>
+            <input type="text" id="UserName" name="UserName" maxlength="16" placeholder="Enter Your Username"><br><br>
+
+            <label for="Password"><b>Password</b></label><br>
+            <input type="password" id="Password" name="Password" minlength="6" placeholder="Enter Your Password"><br><br>
+
+            <label for="Email"><b>Email</b></label><br>
+            <input type="email" id="Email" name="Email" placeholder="Enter Your Email"><br><br><br>
+
+            <input type="submit" value="Send"> 
+            <input type="reset" value="Reset">
+
+        </form>
+
+        <input list="languages" form="form1" name="languages">
+        <datalist id="languages">
+            <option value="HTML">
+            <option value="CSS">
+            <option value="JavaScript">        
+        </datalist>
+        <!--Burda bir "diller" girdisi oluşturuldu ve öneriler eklendi.Kullanıcı seçtiği dili yazmak için inputa tıkladığında önerilerde yanda
+            gözükecek-->
+
+
+        <!-- Farkettiyseniz burada en sonda yazılan önerilerin içinde bulunduğu "languages" girdisi yukarda yazılan kayıt olma girdilerininde içinde
+         bulunduğu "form" etiketinin dışında.Bu yüzden "languages" girdisi siteye herhangi bir şekilde gönderilemeyecek.Eğer bu "form"
+         etiketi dışında kalan inputlarıda siteye göndermek istiyorsak "form" etiketine bir id veririz ve "input" etiketinin içinde form=""
+         niteliğini kullanarak yukarıdaki forma verilen id yi bu niteliğe yazarsak bu girdilerde formun içindeymiş gibi siteye gönderilir ve 
+         bu siteye gönderilen girilerin yazılım dilindede bir anlam taşıması için girdilere kesinlikle bir isim verilmesi lazımdır.Burda anlatılan 
+         tüm işlemler yukarda gerçekleştirildi.Dosyayı tarayıcıda açıp eğer dil seçme yerinden bir dil seçip Send butonuna basarsanız tarayıcının 
+         adres çubuğundaki url'nin değiştiğini görebilirsiniz.
+         -->
+        <br><br><br>
+
+
+        <form  action="" method="GET" id="form2">
+
+        <input type="submit" formaction="example.html" value="Send2"> 
+
+        </form>
+       <!-- formaction niteliği ile submit butonunun,form etiketindeki action değerini geçici olarak değiştirmesi sağlanır.Bu butona basıldığında
+        form verileri "example.html" sayfasına gönderilmeye çalışılır. -->
+
+        
+        <form  action="" method="GET" enctype="multipart/form-data" id="form3">
+
+        <input type="submit" formenctype="" value="Send3"> 
+        
+        </form>
+        <!-- formenctype niteliği ile submit butonunun,form etiketindeki enctype değeri değiştirilebilir.Yalnızca bu butona basıldığında belirtilen 
+         veri kodlama biçimi kullanılır. -->
+
+
+
+        <form  action="" method="GET"  id="form3">
+
+        <input type="submit" formmethod="post" value="Send3"> 
+        
+        </form>
+        <!-- formmethod niteliği ile submit butonunun,form etiketindeki method değeri değiştirilebilir.Formun yöntemi GET olsa bile bu butona 
+         basıldığında veriler POST yöntemiyle gönderilir. -->
+
+
+
+
+        <form  action="" method="GET"  id="form4">
+
+        <input type="submit" formtarget="_blank" value="Send3"> 
+        
+        </form>
+        <!-- formtarget niteliği ile formun gönderileceği pencere veya sekme belirlenebilir."_blank" değeri sayesinde form sonucu yeni bir sekmede 
+         açılır. -->
+        
+
+        <br><br><br>
+
+
+        <select name="language">
+        <optgroup label="Front-end Languages">
+            <option value="css">CSS</option>
+            <option value="javascript">Javascript</option>
+            <option value="html" selected>HTML  </option>
+        </optgroup>
+
+        <optgroup label="Back-end Languages">
+            <option value="php">PHP</option>
+            <option value="javascript">JavaScript</option>
+            <option value="python">Python</option>
+        </optgroup>
+          
+        </select>
+        <!--<select> etiketi, birden fazla seçenek arasından seçim yapılmasını sağlayan açılır listeyi oluşturmak için kullanılır.name niteliği,
+            seçilen değerin form gönderildiğinde sunucu tarafına hangi isimle gönderileceğini belirler.
+            <optgroup> etiketi, <select> içindeki seçenekleri gruplandırmak için kullanılır label niteliği, oluşturulan grubun başlığını belirler.
+            (Örneğin: Front-end Languages, Back-end Languages.)
+            <option> etiketi, kullanıcıya gösterilecek bir seçeneği oluşturur.value niteliği, seçeneğin form gönderildiğinde sunucuya gönderilecek
+            değerini belirler.<option> etiketinin açılış ve kapanış etiketleri arasına yazılan metin, kullanıcının açılır listede göreceği yazıdır.
+            selected niteliği, sayfa ilk açıldığında yazıldığı <option> seçeneğinin varsayılan (otomatik) olarak seçili gelmesini sağlar.
+            -->
+
+        <br><br><br>
+
+        <textarea name="" cols="50" rows="25"></textarea>
+        <!--textarea etiketi kullanıcıdan birden fazla satırlık metin almak için kullanılır.Örneğin; "Hakkında", "Mesaj", "Yorum" gibi alanlarda 
+        tercih edilir.cols niteliği, textarea'nın yaklaşık genişliğini (karakter sayısı olarak),rows niteliği ise yüksekliğini (satır sayısı olarak)
+        belirler.
+-->
+        <button type="submit">Send</button>
+        <!--bu buton yukarda input olarak oluşturulan submit butonuyla aynı işlevi sağlar.Ancak <button> etiketi daha esnektir.
+        İçine metin, resim, ikon veya başka HTML etiketleri yazılabilir.Eğer tipine button yazsaydık normal işlevsiz bir buton olurdu.-->
+        <button type="reset">Reset</button>
+        <!--bu buton ise yukarıda input olarak oluşturulan reset butonuyla aynı işlevi görür.Ancak <button> etiketi daha fazla özelleştirilebilir.-->
+        
+        <br><br><br>
+        
+
+
+
+
+        <form action="" method="GET" id="form5">
+            <fieldset>
+                <legend>Sign in</legend>
+                <label for="UserName2"><b>UserName</b></label><br>
+                <input type="text" id="UserName2" name="UserName2" maxlength="16" placeholder="Enter Your Username"><br><br>
+
+                <label for="Password2"><b>Password</b></label><br>
+                <input type="password" id="Password2" name="Password2" minlength="6" placeholder="Enter Your Password"><br><br>
+
+                <label for="Email2"><b>Email</b></label><br>
+                <input type="email" id="Email2" name="Email2" placeholder="Enter Your Email"><br><br><br>
+
+                <input type="submit" value="Sign in"> 
+                <input type="reset" value="Reset">
+            </fieldset>
+        </form>
+        <!--field etiketi ile form elemanları gruplanır aynı optgroup etiketi ile optionların gruplanması gibi.bu etiket bir çerçeve ekler
+            ve içindeki girdileri ayırır.bu çerçeve ilerde css gibi dillerle değiştirilebilecek.
+
+            legend etiketi,fieldset ile oluşturulan grubun başlığını belirlemek için kullanılır.
+
+            fieldset etiketine disabled niteliği eklenirse,içindeki form elemanları devre dışı kalır ve kullanıcı bunlarla etkileşime giremez.
+            readonly niteliği ise fieldset'te kullanılmaz.Genellikle input ve textarea etiketlerinde kullanılır.readonly olan alan düzenlenemez 
+            ancak okunabilir ve form gönderildiğinde değeri gönderilir.
+            -->
+        
+          
+
+    </Body>
+</html>

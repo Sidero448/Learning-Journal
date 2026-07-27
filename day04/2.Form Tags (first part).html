@@ -5,15 +5,21 @@
         <meta charset="utf-8">
 
 
-        <title>Form Tags</title>
+        <title>Form Tags (first part)</title>
 
     </head>
 
     <body>
          <form action="" method="GET" enctype="multipart/form-data">
+      <!--form etketi içine yazılan girdilerin başka bir sayfaya veya sayfanın kendi içinde gönderilmesine olanak tanır.Eğer inputlar
+      form etiketinin içine yazılmazsa hiçbir yere gönderilemezler.-->
+
       <!--form etiketinin içinde bulunan action etiketi form bilgilerinin nereye gönderileceğini ayarlar boş bırakılırsa aynı sayfaya gönderilir.
-      Method niteliği ile post olarak mı gidecek get olarak mı o ayarlanır daha sonra öğrenilecek.-->
-      <!--enctype günümüzde kullanılmıyor yazılım dilleri zaten bunun yerini alıyor-->
+      Method niteliği Form verilerinin hangi yöntemle gönderileceğini belirler GET Verileri URL'de göstererek gönderir.POST -> Verileri URL'de 
+      göstermeden, istek gövdesinde gönderir.-->
+
+      <!--enctype ise Form verilerinin hangi biçimde gönderileceğini belirler.Özellikle dosya yükleme (input type="file") işlemlerinde 
+      enctype="multipart/form-data" kullanılır.-->
 
 
       <label for="UserName"><b><i>User Name</i></b></label>
@@ -22,9 +28,10 @@
        elemanına ait olduğunu belirtir. Değeri, bağlanacağı form elemanının id değeriyle aynı olmalıdır ve id niteliği, bir HTML elemanına 
        benzersiz (tek) bir kimlik verir. Aynı sayfada iki elemanın id değeri aynı olmamalıdır. CSS, JavaScript ve label etiketi gibi yapılar bu 
        kimliği kullanarak ilgili elemana erişir.-->
-      <input id="UserName" type="text" />
+      <input id="UserName" type="text" name="UserName" />
       <!--input girdi demektir.Kullanıcının girdi yapmasını sağlar.type niteliği ile girdi tipi belirlenir.text tipi normal yazı yazmak için 
-      kullanılır-->
+      kullanılır.Form etiketi içine yazılan girdilerin gönderildikten sonra yazılım tarafında girdinin değerlerinin hangi isim altında 
+      gönderileceğini belirlemek için name niteliğiyle isim verilmesi lazımdır.-->
       <input id="UserName" type="text" placeholder="Enter Your UserName" autofocus/>
       <!--place holder niteliği ile kullanıcı girdiyi yazana kadar input kısmında görünecek yazıyı belirtebiliriz. autofocus niteliği site 
       açıldığı gibi bu girdiye odaklanılmasını sağlar.-->
@@ -69,7 +76,7 @@
         <!--checkbox tipi ile kutucuk işaretleme yapılır birşeyi onaylamak için falan kullanılabilir.-->
       </label>
 
-      <iframe name="t.a.c"src="E:\Coding\Learning\Learning journal\TermsAndConditions.html"></iframe><br/>
+      <iframe name="t.a.c"src="E:\Coding\Learning\Learning journal\Resources\Additional Html Files\TermsAndConditions.html"></iframe><br/>
 
 
       <label>
