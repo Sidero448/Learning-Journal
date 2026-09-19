@@ -1,0 +1,1 @@
+bugün 19.09.2026 yaklaşık 1.30 saattir falan kod yazdım css öğrenmeye başladığım ilk gün.css kodlarını eklemenin yollarını öğrendim,

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+
+
+
+
+        <!--HARİCİ BİR CSS DOSYASI İLE DAHİL ETME-->
+
+            <!--Bu yöntem çok büyük projeler yapılırken html dosyasının içinde karmaşıklık olmasın diye kullanılan bir yöntemdir.CSS
+                kodları ayrı bir dosyaya yazılır.-->
+            <link rel="stylesheet" href="example.css"> 
+            <!--link yazıp taba basarak hazır şekilde etiketi alabiliriz.Hrefin içine css kodlarını yazdığımız dosyanın adını yazıp 
+                css kodlarının bu dosyaya etki etmesini sağlayabiliriz-->
+        <!-- STYLE ETİKETLERİNİ KULLANARAK CSS KODUNU DAHİL ETMEK.-->
+
+
+
+        
+        <style>
+            h1{color:red;} 
+        </style>
+            <!--css kodunun başına h1 yazdık çünkü h1 başlıklarına etki etmesini istiyoruz.color ile renk verdik ve renki kırmızı olarak
+            seçtik-->
+
+            <!--Style etiketi bir etiket,id,class vs. seçilerek içlerindeki tüm değişkenlere etki etmesi için kullanılır.Örneğin ben burda 
+                h1 başlıklarına kırmızı renk verdiğim için bu dosya özelinde yazılan tüm h1 başlıkları kırmızı renkte olacaktır yani bu
+                style etiketinde verilen özellik tüm h1 başlıklarına etki eder.css kodları style etiketleri kullanılarak css kodunun içine 
+                dahil edilecekse style etiketleri head etiketlerinin içinde bulunmalıdır.-->
+
+
+
+       
+    </head>
+    <body>
+
+        <h1>SİDERO</h1>
+        <h1>SİDERO</h1>
+            <!--bu başlıkların hepsi kırmızı olacaktır çünkü head kısmında style etiketinin içine yazılan tüm css kodları bu dosyadaki
+                tüm h1 başlıklarına etki edecek bunun nedeni ise style etiketinin içinde yazılan css kodunun h1 başlıklarına etki
+                edecek şekilde ayarlanması.-->
+        <!-- ETİKET KULLANARAK CSS KODUNU DAHİL ETMEK.-->
+
+        <h1 style="color:red;background-color: orange">Sidero</h1> 
+            <!--bu css kodunu etiket kullanarak dahil etmeye bir örnektir.Style attribute'u stili düzenler,color ile renk seçeriz.
+                background color ile sadece yazdığımız başlığın satırının rengini değiştiririz.css kodlarını etiket kullanarak dahil edersek
+                yazdığımız css kodları sadece style attribute'unu kullandığımız etiketin içinde geçerli olur.Etiket kullanarak dahil etmeyi
+                sadece tek bir başlığı veya başka birşeyi hızlı bir şekilde düzenlemek istediğimizde yaparız-->
+
+        
+
+        
+
+    </body>
+   
+</html>

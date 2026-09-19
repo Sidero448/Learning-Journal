@@ -1,0 +1,7 @@
+h1{
+    color:blue;
+    /*css kodunun başına h1 yazdık çünkü h1 başlıklarına etki etmesini istiyoruz.color ile renk verdik ve rengi mavi olarak
+    seçtik*/
+    background-color: blueviolet;
+    /*background-color h1 elementinin arka plan rengini değiştirir.*/
+}
